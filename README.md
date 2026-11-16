@@ -30,7 +30,7 @@ Everything is generated or wired by reference; the deploy asks nothing.
 
 The administrator is created only when no user with that name exists. Changing `CVAT_ADMIN_PASSWORD` later does not change the password; use CVAT's own "change password" page or `/admin`.
 
-Optional settings (not set by the template): email/SMTP for password resets (`EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD`, `EMAIL_USE_TLS`, `DEFAULT_FROM_EMAIL` with `DJANGO_SETTINGS_MODULE=cvat.settings.email_settings`), `CVAT_SERVER_PROCESSES` (uvicorn processes, default 2). The analytics stack (ClickHouse, Vector, Grafana) and serverless auto-annotation (Nuclio) are not included: Nuclio needs Docker access, which Railway does not offer.
+Optional: `CVAT_SERVER_PROCESSES` sets the number of API server processes (default 2). Email is not configured, so CVAT sends no password-reset emails; an administrator can reset passwords at `/admin`. The analytics stack (ClickHouse, Vector, Grafana) and serverless auto-annotation (Nuclio) are not included: Nuclio needs Docker access, which Railway does not offer.
 
 ## Updates
 
