@@ -22,6 +22,11 @@ export CVAT_OPA_URL="${CVAT_OPA_URL:-http://127.0.0.1:8181}"
 export CVAT_LOG_IMPORT_ERRORS="${CVAT_LOG_IMPORT_ERRORS:-true}"
 export CVAT_ALLOW_STATIC_CACHE="${CVAT_ALLOW_STATIC_CACHE:-no}"
 export SMOKESCREEN_OPTS="${SMOKESCREEN_OPTS:-}"
+# Railway hosts report many CPUs; numpy's OpenBLAS would start one thread per
+# CPU in each of the ~11 processes and hit the container's thread limit.
+export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-1}"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
+export MKL_NUM_THREADS="${MKL_NUM_THREADS:-1}"
 export NUMPROCS="${CVAT_SERVER_PROCESSES:-2}"
 # Proxies in front of uvicorn: Railway's edge (CVAT_NUM_PROXIES, default 1)
 # plus the nginx inside this container.
