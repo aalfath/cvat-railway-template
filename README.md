@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/cvat?utm_medium=integration&utm_source=button&utm_campaign=cvat)
+
 # CVAT on Railway
 
 A Railway template for [CVAT](https://github.com/cvat-ai/cvat) (Computer Vision Annotation Tool), the open-source tool for labelling images and video for computer-vision datasets.
