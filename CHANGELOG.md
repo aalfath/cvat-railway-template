@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-16: Deploy on Railway button
+
+- README starts with the Deploy on Railway button for the published template (`cvat`). No change to the app or its configuration.
+
 ## 2026-11-16: CVAT v2.83.0
 
 - First release of the template: CVAT v2.83.0 (`cvat/server` and `cvat/ui` pinned by digest), OPA 1.12.2, Kvrocks 2.15.0, Railway Postgres and Redis.
